@@ -1,0 +1,17 @@
+<?php $this->restrict(); ?>
+<h1>Registration</h1>
+<?php include $this->getTemplateFile('messages.phtml') ?>
+<form method="POST">
+    <?=$csrf?>
+    
+    <input type="email" name="email" value="<?=@$params['email']?>" placeholder="Email address">
+    <span class="errors"><?=@implode(', ', @$errors['email'])?></span>
+    
+    <input type="email_retype" name="email_retype" value="<?=@$params['email_retype']?>" placeholder="Re-enter email address">
+    <span class="errors"><?=@implode(', ', @$errors['email_retype'])?></span>
+    
+    <input type="password" name="password" value="<?=@$params['password']?>" placeholder="Password">
+    <span class="errors"><?=@implode(', ', @$errors['password'])?></span>
+    
+    <input type="submit" value="Register">
+</form>

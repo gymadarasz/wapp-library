@@ -1,0 +1,9 @@
+<?php $this->restrict(); ?>
+<h1>Account activation</h1>
+<?php include $this->getTemplateFile('messages.phtml') ?>
+
+<?php if(isset($errors['token'])): ?>
+<p>Token error: <?=implode(', ', $errors['token'])?></p>
+<?php endif ?>
+
+<a href="?q=login">Login</a>
