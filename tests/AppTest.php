@@ -16,6 +16,7 @@ namespace Madsoft\Library\Test;
 use Madsoft\Library\App;
 use Madsoft\Library\Invoker;
 use Madsoft\Library\Responder\Account\AccountConfig;
+use Madsoft\Library\Responder\Example\Example;
 use Madsoft\Library\Tester\Test;
 
 /**
@@ -46,7 +47,12 @@ class AppTest extends Test
     public function testApp(Invoker $invoker): void
     {
         $_SERVER['REQUEST_METHOD'] = 'GET';
-        $output = (new App($invoker))->getOutput([AccountConfig::ROUTES]);
+        $output = (new App($invoker))->getOutput(
+            [
+            AccountConfig::ROUTES,
+            Example::ROUTES,
+            ]
+        );
         $this->assertTrue((bool)$output);
     }
 }

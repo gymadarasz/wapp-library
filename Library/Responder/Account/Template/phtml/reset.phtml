@@ -1,0 +1,11 @@
+<?php $this->restrict(); ?>
+<h1>Password reset</h1>
+<?php include $this->getTemplateFile('messages.phtml') ?>
+<form method="POST">
+    <?=$csrf?>
+    
+    <input type="email" name="email" value="<?=@$params['email']?>" placeholder="Email address">
+    <span class="errors"><?=@implode(', ', @$errors['email'])?></span>
+
+    <input type="submit" value="Reset">
+</form>

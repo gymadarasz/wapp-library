@@ -1,0 +1,11 @@
+<?php $this->restrict(); ?>
+<h1>Login</h1>
+<?php include $this->getTemplateFile('messages.phtml') ?>
+<form method="POST" action="?q=login">
+    <?=$csrf?>
+    <input type="email" name="email" placeholder="Email">
+    <input type="password" name="password" placeholder="Password">
+    <input type="submit" value="Login">
+</form>
+<a href="?q=registry">Registration</a>
+<a href="?q=reset">Forgot password</a>

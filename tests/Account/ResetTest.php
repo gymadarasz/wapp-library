@@ -56,6 +56,8 @@ class ResetTest extends Test
      * @suppress PhanUnreferencedPublicMethod
      * @suppress PhanTypeMismatchArgument
      * @suppress PhanUndeclaredClassMethod
+     * @suppress PhanPossiblyUndeclaredMethod
+     * @suppress PhanTypeMismatchArgumentProbablyReal
      */
     public function testDoResetDbFails(Invoker $invoker): void
     {
@@ -105,6 +107,8 @@ class ResetTest extends Test
      * @suppress PhanUnreferencedPublicMethod
      * @suppress PhanTypeMismatchArgument
      * @suppress PhanUndeclaredClassMethod
+     * @suppress PhanPossiblyUndeclaredMethod
+     * @suppress PhanTypeMismatchArgumentProbablyReal
      */
     public function testDoResetMailFails(Invoker $invoker): void
     {

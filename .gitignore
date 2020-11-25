@@ -1,0 +1,6 @@
+/Library/Tester/coverage/coverage.html
+/Library/mails/
+/Library/config/config.*.ini
+*.cache
+*.log
+*.cache.php

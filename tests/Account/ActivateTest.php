@@ -55,6 +55,7 @@ class ActivateTest extends Test
      * @suppress PhanTypeMismatchArgument
      * @suppress PhanUnreferencedPublicMethod
      * @suppress PhanUnreferencedClosure
+     * @suppress PhanPossiblyUndeclaredMethod
      */
     public function testDoActivateDbFails(): void
     {

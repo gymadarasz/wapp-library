@@ -52,6 +52,7 @@ class ChangeTest extends Test
      * @suppress PhanUndeclaredClassMethod
      * @suppress PhanTypeMismatchArgument
      * @suppress PhanUnreferencedPublicMethod
+     * @suppress PhanPossiblyUndeclaredMethod
      */
     public function testDoChangePasswordDbFails(): void
     {

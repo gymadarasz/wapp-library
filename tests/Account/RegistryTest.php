@@ -58,6 +58,7 @@ class RegistryTest extends Test
      * @suppress PhanTypeMismatchArgument
      * @suppress PhanUnreferencedPublicMethod
      * @suppress PhanUnreferencedClosure
+     * @suppress PhanPossiblyUndeclaredMethod
      */
     public function testDoRegistryDbFails(): void
     {
@@ -130,6 +131,7 @@ class RegistryTest extends Test
      * @suppress PhanTypeMismatchArgument
      * @suppress PhanUnreferencedPublicMethod
      * @suppress PhanUnreferencedClosure
+     * @suppress PhanPossiblyUndeclaredMethod
      */
     public function testDoRegistryEmailFails(): void
     {
