@@ -365,6 +365,8 @@ abstract class Test
      * @param string $message  message
      *
      * @return void
+     *
+     * @suppress PhanUnreferencedPublicMethod
      */
     public function assertStringNotContains(
         string $expected,

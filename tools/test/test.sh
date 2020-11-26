@@ -21,7 +21,7 @@ show_next() {
 trap error_exit 0 
 
 show_next "clean up.."
-echo "" > route.cache.php
+echo "" > lib/route.cache.php
 
 show_next "php-cs-fixer"
 vendor/bin/php-cs-fixer fix lib
@@ -38,7 +38,7 @@ vendor/bin/phpcbf src
 set -e
 
 show_next "phpcs"
-vendor/bin/phpcs lib --ignore=*/tools/*,*.cache.php
+vendor/bin/phpcs lib --ignore=*/tools/*,*.cache.php,*/routes.cache.php,
 vendor/bin/phpcs src
 
 show_next "phpstan"

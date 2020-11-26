@@ -1,0 +1,1547 @@
+[2020-11-25 22:51:39] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-25 22:51:39] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-25 22:51:39] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-25 22:51:39] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-25 22:51:39] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-25 22:51:41] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(77): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(54): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreate()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 22:51:41] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(92): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(55): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 22:51:41] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(122): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(59): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2Create()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 22:51:41] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(137): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(60): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2CreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 22:51:41] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(154): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(61): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2ListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 22:51:41] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(109): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(65): Madsoft\Talkbot\Test\MyScriptsTest->canSeeListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 23:42:30] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-25 23:42:30] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-25 23:42:30] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-25 23:42:30] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-25 23:42:30] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-25 23:42:32] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(77): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(54): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreate()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 23:42:32] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(92): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(55): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 23:42:32] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(122): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(59): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2Create()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 23:42:32] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(137): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(60): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2CreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 23:42:32] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(154): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(61): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2ListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 23:42:32] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(109): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(65): Madsoft\Talkbot\Test\MyScriptsTest->canSeeListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 23:45:13] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-25 23:45:13] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-25 23:45:13] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-25 23:45:13] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-25 23:45:13] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-25 23:45:17] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(77): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(54): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreate()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 23:45:17] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(92): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(55): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 23:45:17] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(122): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(59): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2Create()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 23:45:17] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(137): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(60): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2CreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 23:45:17] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(154): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(61): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2ListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-25 23:45:17] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(109): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(65): Madsoft\Talkbot\Test\MyScriptsTest->canSeeListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:06:12] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 00:06:12] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 00:06:12] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 00:06:12] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 00:06:12] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 00:06:14] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(77): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(54): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreate()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:06:14] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(92): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(55): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:06:14] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(122): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(59): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2Create()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:06:14] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(137): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(60): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2CreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:06:14] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(154): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(61): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2ListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:06:14] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(109): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(65): Madsoft\Talkbot\Test\MyScriptsTest->canSeeListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:07:10] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 00:07:10] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 00:07:10] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 00:07:10] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 00:07:10] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 00:07:12] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(77): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(54): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreate()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:07:12] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(92): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(55): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:07:12] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(122): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(59): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2Create()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:07:12] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(137): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(60): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2CreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:07:12] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(154): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(61): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2ListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:07:12] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(19): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(109): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(65): Madsoft\Talkbot\Test\MyScriptsTest->canSeeListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:34:01] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 00:34:01] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 00:34:01] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 00:34:01] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 00:34:01] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 00:34:04] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(77): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(54): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreate()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:34:04] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(92): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(55): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:34:04] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(122): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(59): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2Create()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:34:04] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(137): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(60): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2CreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:34:04] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(154): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(61): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2ListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:34:04] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(109): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(65): Madsoft\Talkbot\Test\MyScriptsTest->canSeeListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:35:02] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 00:35:02] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 00:35:02] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 00:35:02] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 00:35:02] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 00:35:05] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(77): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(54): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreate()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:35:05] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(92): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(55): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:35:05] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(122): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(59): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2Create()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:35:05] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(137): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(60): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2CreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:35:05] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(154): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(61): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2ListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:35:05] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(109): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(65): Madsoft\Talkbot\Test\MyScriptsTest->canSeeListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:55:12] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 00:55:12] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 00:55:12] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 00:55:12] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 00:55:12] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 00:55:15] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(77): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(54): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreate()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:55:15] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(92): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(55): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:55:15] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(122): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(59): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2Create()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:55:15] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(137): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(60): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2CreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:55:15] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(154): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(61): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2ListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 00:55:15] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(109): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(65): Madsoft\Talkbot\Test\MyScriptsTest->canSeeListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:10:04] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:10:04] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 01:10:04] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:10:04] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:10:04] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 01:10:07] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(77): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(54): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreate()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:10:07] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(92): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(55): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:10:07] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(122): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(59): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2Create()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:10:07] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(137): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(60): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2CreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:10:07] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(154): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(61): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2ListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:10:07] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(109): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(65): Madsoft\Talkbot\Test\MyScriptsTest->canSeeListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:14:11] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:14:11] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 01:14:11] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:14:11] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:14:11] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 01:14:13] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(77): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(54): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreate()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:14:13] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(92): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(55): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:14:13] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(122): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(59): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2Create()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:14:13] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(137): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(60): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2CreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:14:13] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(154): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(61): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2ListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:14:13] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(109): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(65): Madsoft\Talkbot\Test\MyScriptsTest->canSeeListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:14:39] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'gyula.madarasz@gmail.com'
+[2020-11-26 01:14:42] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'gyula.madarasz@gmail.com'
+[2020-11-26 01:14:42] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:14:52] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:121
+Message: 'CSRF token mismatch.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#1 /var/www/sandbox/my-project/index.php(22): Madsoft\Library\App->getOutput()
+#2 {main}
+[2020-11-26 01:15:05] [error] Login error, reason: field 'password', error(s): 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 01:15:17] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 01:16:04] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:16:04] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 01:16:04] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:16:04] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:16:04] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 01:16:07] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(77): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(54): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreate()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:16:07] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(92): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(55): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:16:07] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(122): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(59): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2Create()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:16:07] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(137): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(60): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2CreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:16:07] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(154): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(61): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2ListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:16:07] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(109): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(65): Madsoft\Talkbot\Test\MyScriptsTest->canSeeListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:17:16] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:17:16] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 01:17:16] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:17:16] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:17:16] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 01:17:19] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(77): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(54): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreate()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:17:19] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(92): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(55): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:17:19] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(122): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(59): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2Create()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:17:19] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(137): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(60): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2CreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:17:19] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(154): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(61): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2ListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:17:19] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(109): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(65): Madsoft\Talkbot\Test\MyScriptsTest->canSeeListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:18:26] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:18:26] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 01:18:26] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:18:26] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:18:26] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 01:18:28] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(77): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(54): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreate()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:18:28] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(92): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(55): Madsoft\Talkbot\Test\MyScriptsTest->canSeeCreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:18:28] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/create''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(122): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(59): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2Create()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:18:28] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Csrf.php:71
+Message: 'CSRF token is missing from session.'
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(120): Madsoft\Library\Csrf->check()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(137): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(60): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2CreateWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:18:28] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(154): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(61): Madsoft\Talkbot\Test\MyScriptsTest->canSeeUser2ListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:18:28] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=my-scripts/list''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(109): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/src/tests/MyScriptsTest.php(65): Madsoft\Talkbot\Test\MyScriptsTest->canSeeListWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Talkbot\Test\MyScriptsTest->testMyScripts()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:31:25] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:31:25] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 01:31:25] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:31:25] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:31:25] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 01:33:56] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:33:56] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 01:33:56] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:33:56] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:33:56] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 01:34:44] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:34:44] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 01:34:44] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:34:44] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:34:45] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 01:47:41] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:47:41] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 01:47:41] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:47:41] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:47:41] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 01:51:56] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:51:56] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 01:51:56] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:51:56] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:51:56] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 01:54:39] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:54:39] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 01:54:39] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:54:39] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:54:39] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 01:55:49] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:55:49] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 01:55:49] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:55:49] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:55:49] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 01:59:06] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:59:06] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 01:59:06] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:59:06] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:59:06] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 01:59:07] [info] Email saved to: /var/www/sandbox/my-project/lib/Library/mails/2020-11-07 01-59-07 to tester@testing.com (Activate your account).html
+[2020-11-26 01:59:07] [info] Email saved to: /var/www/sandbox/my-project/lib/Library/mails/2020-11-07 01-59-07 to tester@testing.com (Activate your account).html
+[2020-11-26 01:59:09] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:59:09] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 01:59:09] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:59:09] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 01:59:09] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=registry''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(303): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(143): Madsoft\Library\Test\Account\AccountTest->canSeeRegistry()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Library\Test\Account\AccountTest->testAccount()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:59:09] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'POST', query: 'q=registry''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(318): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(146): Madsoft\Library\Test\Account\AccountTest->canSeeRegistryFails()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Library\Test\Account\AccountTest->testAccount()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:59:09] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'POST', query: 'q=registry''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(334): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(146): Madsoft\Library\Test\Account\AccountTest->canSeeRegistryFails()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Library\Test\Account\AccountTest->testAccount()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:59:09] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'POST', query: 'q=registry''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(347): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(146): Madsoft\Library\Test\Account\AccountTest->canSeeRegistryFails()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Library\Test\Account\AccountTest->testAccount()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:59:09] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'POST', query: 'q=registry''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(360): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(146): Madsoft\Library\Test\Account\AccountTest->canSeeRegistryFails()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Library\Test\Account\AccountTest->testAccount()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:59:09] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'POST', query: 'q=registry''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(373): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(146): Madsoft\Library\Test\Account\AccountTest->canSeeRegistryFails()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Library\Test\Account\AccountTest->testAccount()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:59:09] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'POST', query: 'q=registry''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(385): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(146): Madsoft\Library\Test\Account\AccountTest->canSeeRegistryFails()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Library\Test\Account\AccountTest->testAccount()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:59:09] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'POST', query: 'q=registry''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(397): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(146): Madsoft\Library\Test\Account\AccountTest->canSeeRegistryFails()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Library\Test\Account\AccountTest->testAccount()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:59:09] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'POST', query: 'q=registry''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(119): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(417): Madsoft\Library\Tester\Test->post()
+#6 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(149): Madsoft\Library\Test\Account\AccountTest->canSeeRegistryWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Library\Test\Account\AccountTest->testAccount()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:59:09] [exception] Exception occured: RuntimeException (code: 0) at /var/www/sandbox/my-project/lib/Library/Request.php:150
+Message: 'Route not found for requested area: 'protected', method: 'GET', query: 'q=resend''
+Trace:
+#0 /var/www/sandbox/my-project/lib/Library/Request.php(124): Madsoft\Library\Request->call()
+#1 /var/www/sandbox/my-project/lib/Library/App.php(57): Madsoft\Library\Request->process()
+#2 /var/www/sandbox/my-project/index.php(20): Madsoft\Library\App->getOutput()
+#3 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(133): include('/var/www/sandbo...')
+#4 /var/www/sandbox/my-project/lib/Library/Tester/Test.php(95): Madsoft\Library\Tester\Test->getContents()
+#5 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(432): Madsoft\Library\Tester\Test->get()
+#6 /var/www/sandbox/my-project/lib/tests/Account/AccountTest.php(155): Madsoft\Library\Test\Account\AccountTest->canSeeResendWorks()
+#7 /var/www/sandbox/my-project/lib/Library/Invoker.php(84): Madsoft\Library\Test\Account\AccountTest->testAccount()
+#8 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(201): Madsoft\Library\Invoker->invoke()
+#9 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(153): Madsoft\Library\Tester\Tester->run()
+#10 /var/www/sandbox/my-project/lib/Library/Tester/Tester.php(121): Madsoft\Library\Tester\Tester->runTestFile()
+#11 /var/www/sandbox/my-project/lib/tools/test/test.php(46): Madsoft\Library\Tester\Tester->test()
+#12 {main}
+[2020-11-26 01:59:12] [info] Email saved to: /var/www/sandbox/my-project/lib/Library/mails/2020-11-12 01-59-12 to tester@testing.com (Pasword reset requested).html
+[2020-11-26 02:00:02] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 02:00:02] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 02:00:02] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 02:00:02] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 02:00:02] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 02:00:04] [info] Email saved to: /var/www/sandbox/my-project/lib/Library/mails/2020-11-04 02-00-04 to tester@testing.com (Activate your account).html
+[2020-11-26 02:00:04] [info] Email saved to: /var/www/sandbox/my-project/lib/Library/mails/2020-11-04 02-00-04 to tester@testing.com (Activate your account).html
+[2020-11-26 02:00:07] [info] Email saved to: /var/www/sandbox/my-project/lib/Library/mails/2020-11-07 02-00-07 to tester@testing.com (Pasword reset requested).html
+[2020-11-26 02:10:52] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 02:10:52] [error] Login error, reason: field 'password', error(s): 'Mandatory', 'Invalid password', email: 'tester@testing.com'
+[2020-11-26 02:10:52] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 02:10:52] [error] Login error, reason: field 'email', error(s): 'Mandatory', 'Invalid email format'
+[2020-11-26 02:10:52] [error] Login error, reason: field 'id', error(s): 'Mandatory', 'Not a number' field 'email', error(s): 'Mandatory', 'Invalid email format' field 'hash', error(s): 'Mandatory', 'Password isn't match', email: 'tester@testing.com'
+[2020-11-26 02:10:53] [info] Email saved to: /var/www/sandbox/my-project/lib/Library/mails/2020-11-53 02-10-53 to tester@testing.com (Activate your account).html
+[2020-11-26 02:10:53] [info] Email saved to: /var/www/sandbox/my-project/lib/Library/mails/2020-11-53 02-10-53 to tester@testing.com (Activate your account).html
+[2020-11-26 02:10:56] [info] Email saved to: /var/www/sandbox/my-project/lib/Library/mails/2020-11-56 02-10-56 to tester@testing.com (Pasword reset requested).html
