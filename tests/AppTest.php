@@ -45,8 +45,8 @@ class AppTest extends Test
      * @suppress PhanUnreferencedPublicMethod
      */
     public function testApp(Invoker $invoker): void
-    {        
-        $_SERVER['REQUEST_METHOD'] = 'GET';        
+    {
+        $_SERVER['REQUEST_METHOD'] = 'GET';
         $output = (new App($invoker))->getOutput(
             [
             AccountConfig::ROUTES,
@@ -57,6 +57,10 @@ class AppTest extends Test
         
         file_put_contents(App::ROUTE_CACHE_FILE, '');
         clearstatcache();
-        $this->assertEquals('', trim(file_get_contents(App::ROUTE_CACHE_FILE)));
+        $this->assertTrue(file_exists(App::ROUTE_CACHE_FILE));
+        $this->assertEquals(
+            '',
+            trim((string)file_get_contents(App::ROUTE_CACHE_FILE))
+        );
     }
 }
