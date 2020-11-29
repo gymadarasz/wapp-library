@@ -56,8 +56,8 @@ class MysqlTest extends Test
             "SELECT email FROM user WHERE hash = 'test' ORDER BY token"
         );
         $this->assertEquals(3, count($results));
-        $this->assertEquals('test1', $results[0]->get('email'));
-        $this->assertEquals('test2', $results[1]->get('email'));
-        $this->assertEquals('test3', $results[2]->get('email'));
+        $this->assertEquals('test1', $results[0]['email']);
+        $this->assertEquals('test2', $results[1]['email']);
+        $this->assertEquals('test3', $results[2]['email']);
     }
 }

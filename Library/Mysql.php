@@ -164,7 +164,7 @@ class Mysql
      *
      * @param string $query query
      *
-     * @return Row[]
+     * @return mixed[]
      * @throws RuntimeException
      */
     public function select(string $query): array
@@ -174,7 +174,8 @@ class Mysql
         if ($result instanceof mysqli_result) {
             $rows = [];
             while ($row = $result->fetch_assoc()) {
-                $rows[] = (new Row())->setFields($row);
+                //                $rows[] = (new Row())->setFields($row);
+                $rows[] = $row;
             }
             return $rows;
         }

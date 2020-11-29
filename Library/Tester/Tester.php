@@ -14,6 +14,7 @@
 namespace Madsoft\Library\Tester;
 
 use Exception;
+use Madsoft\Library\Config;
 use Madsoft\Library\Coverage\Coverage;
 use Madsoft\Library\Folders;
 use Madsoft\Library\Invoker;
@@ -54,15 +55,26 @@ class Tester extends Test
      * @param Folders  $folders  folders
      * @param Invoker  $invoker  invoker
      * @param Coverage $coverage coverage
+     * @param Config   $config   config
+     *
+     * @throws RuntimeException
      */
     public function __construct(
         Folders $folders,
         Invoker $invoker,
-        Coverage $coverage
+        Coverage $coverage,
+        Config $config
     ) {
         $this->folders = $folders;
         $this->invoker = $invoker;
         $this->coverage = $coverage;
+        
+        $env = $config->getEnv();
+        if ($env !== 'test') {
+            throw new RuntimeException(
+                'Environment should be "test", actual $env is "' . $env . '"'
+            );
+        }
     }
     
     /**
