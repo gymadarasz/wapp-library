@@ -29,6 +29,7 @@ class Config extends Section
 {
     const ENV = 'test';
     const PATH = __DIR__ . '/config/';
+    const PATH_EXT = __DIR__ . '/../../src/config/';
     
     protected Template $template;
     
@@ -44,9 +45,11 @@ class Config extends Section
     ) {
         $this->template = $template;
         
-        $cfg = $this->readConfig($this::PATH . 'config.ini');
-        $ext = $this->readConfig($this::PATH . 'config.' . $this::ENV . '.ini');
-        $this->data = $merger->merge($cfg, $ext);
+        $this->data = $this->readConfig($this::PATH . 'config.ini');
+        $lib = $this->readConfig($this::PATH . 'config.' . $this::ENV . '.ini');
+        $this->data = $merger->merge($this->data, $lib);
+        $ext = $this->readConfig($this::PATH_EXT . 'config.' . $this::ENV . '.ini');
+        $this->data = $merger->merge($this->data, $ext);
     }
     
     /**

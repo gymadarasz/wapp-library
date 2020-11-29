@@ -29,13 +29,20 @@ use RuntimeException;
  */
 class Mysql
 {
-    const HOST = 'localhost';
-    const USER = 'user';
-    const PASSWORD = 'password';
-    const DATABASE = 'talkbot';
-    
     protected mysqli $mysqli;
     protected bool $connected = false;
+    
+    protected Config $config;
+    
+    /**
+     * Method __construct
+     *
+     * @param Config $config config
+     */
+    public function __construct(Config $config)
+    {
+        $this->config = $config;
+    }
 
     /**
      * Method transStart
@@ -103,11 +110,12 @@ class Mysql
         if ($this->connected) {
             return;
         }
+        $dbcfg = $this->config->get('database');
         $this->mysqli = new mysqli(
-            self::HOST,
-            self::USER,
-            self::PASSWORD,
-            self::DATABASE
+            $dbcfg->get('host'),
+            $dbcfg->get('user'),
+            $dbcfg->get('password'),
+            $dbcfg->get('database')
         );
         if ($this->mysqli->connect_error) {
             throw new RuntimeException(
