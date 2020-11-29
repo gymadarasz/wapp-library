@@ -85,7 +85,7 @@ class PasswordResetArrayResponder extends ArrayResponder
     {
         $token = $params->get('token', '');
         if ($token) {
-            $user = $this->crud->get('user', ['id'], ['token' => $token], 1, 0, -1);
+            $user = $this->crud->getRow('user', ['id'], ['token' => $token]);
             if (!($user['id'] ?? '')) {
                 return $this->getErrorResponse(
                     'Invalid token'
@@ -116,7 +116,7 @@ class PasswordResetArrayResponder extends ArrayResponder
         }
         
         $email = (string)$params->get('email');
-        $user = $this->crud->get('user', ['email'], ['email' => $email], 1, 0, -1);
+        $user = $this->crud->getRow('user', ['email'], ['email' => $email]);
         if (($user['email'] ?? '') !== $email) {
             return $this->getErrorResponse(
                 'Email address not found'
@@ -124,7 +124,7 @@ class PasswordResetArrayResponder extends ArrayResponder
         }
         
         $token = $this->token->generate();
-        if (!$this->crud->set('user', ['token' => $token], ['email' => $email])) {
+        if (!$this->crud->setRow('user', ['token' => $token], ['email' => $email])) {
             return $this->getErrorResponse(
                 'Token is not updated'
             );

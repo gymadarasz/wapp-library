@@ -63,11 +63,11 @@ class ResetTest extends Test
         $template = $invoker->getInstance(Template::class);
         $merger = $invoker->getInstance(Merger::class);
         $crud = $this->getMock(Crud::class);
-        $crud->shouldReceive('get')->andReturn(
+        $crud->shouldReceive('getRow')->andReturn(
         //            (new Row)->setFields(['email' => 'emailaddr1'])
             ['email' => 'emailaddr1']
         );
-        $crud->shouldReceive('set')->andReturnFalse();
+        $crud->shouldReceive('setRow')->andReturnFalse();
         $_SERVER['REQUEST_METHOD'] = 'GET';
         $_GET['email'] = 'emailaddr1';
         $params = $invoker->getInstance(Params::class);
@@ -115,11 +115,11 @@ class ResetTest extends Test
         $template = $invoker->getInstance(Template::class);
         $merger = $invoker->getInstance(Merger::class);
         $crud = $this->getMock(Crud::class);
-        $crud->shouldReceive('get')->andReturn(
+        $crud->shouldReceive('getRow')->andReturn(
         //            (new Row)->setFields(['email' => 'emailaddr1'])
             ['email' => 'emailaddr1']
         );
-        $crud->shouldReceive('set')->andReturnTrue();
+        $crud->shouldReceive('setRow')->andReturnTrue();
         $_SERVER['REQUEST_METHOD'] = 'GET';
         $_GET['email'] = 'emailaddr1';
         $params = $invoker->getInstance(Params::class);

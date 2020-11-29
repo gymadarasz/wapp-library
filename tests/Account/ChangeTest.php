@@ -72,7 +72,7 @@ class ChangeTest extends Test
         $merger = new Merger();
         
         $crud = $this->getMock(Crud::class);
-        $crud->shouldReceive('set')->andReturnFalse();
+        $crud->shouldReceive('setRow')->andReturnFalse();
         
         $validator = $this->getMock(AccountValidator::class);
         $validator->shouldReceive('validateChangePassword')->andReturn([]);

@@ -74,13 +74,10 @@ class ActivateArrayResponder extends ArrayResponder
         
         $token = $params->get('token');
         
-        $user = $this->crud->get(
+        $user = $this->crud->getRow(
             'user',
             ['id', 'active'],
-            ['token' => $token],
-            1,
-            0,
-            -1
+            ['token' => $token]
         );
         if (!($user['id'] ?? '')) {
             return $this->getErrorResponse(
@@ -94,7 +91,7 @@ class ActivateArrayResponder extends ArrayResponder
             );
         }
         
-        if (!$this->crud->set('user', ['active' => '1'], ['token' => $token])) {
+        if (!$this->crud->setRow('user', ['active' => '1'], ['token' => $token])) {
             return $this->getErrorResponse(
                 'User activation failed'
             );

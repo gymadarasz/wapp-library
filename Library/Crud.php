@@ -51,8 +51,124 @@ class Crud
         $this->session = $session;
     }
     
-    public function selectOwnedRows(): array {
-        
+    /**
+     * Method getRow
+     *
+     * @param string   $tableUnsafe  tableUnsafe
+     * @param string[] $fieldsUnsafe fieldsUnsafe
+     * @param string[] $filterUnsafe filterUnsafe
+     * @param string   $filterLogic  filterLogic
+     *
+     * @return string[]
+     */
+    public function getRow(
+        string $tableUnsafe,
+        array $fieldsUnsafe,
+        array $filterUnsafe = [],
+        string $filterLogic = 'OR'
+    ): array {
+        return $this->get(
+            $tableUnsafe,
+            $fieldsUnsafe,
+            $filterUnsafe,
+            $filterLogic,
+            1,
+            0,
+            -1
+        );
+    }
+    
+    /**
+     * Method getOwnedRow
+     *
+     * @param string   $tableUnsafe  tableUnsafe
+     * @param string[] $fieldsUnsafe fieldsUnsafe
+     * @param string[] $filterUnsafe filterUnsafe
+     * @param string   $filterLogic  filterLogic
+     * @param int      $uid          uid
+     *
+     * @return string[]
+     */
+    public function getOwnedRow(
+        string $tableUnsafe,
+        array $fieldsUnsafe,
+        array $filterUnsafe = [],
+        string $filterLogic = 'OR',
+        int $uid = 0
+    ): array {
+        return $this->get(
+            $tableUnsafe,
+            $fieldsUnsafe,
+            $filterUnsafe,
+            $filterLogic,
+            1,
+            0,
+            $uid
+        );
+    }
+    
+    /**
+     * Method getRows
+     *
+     * @param string   $tableUnsafe  tableUnsafe
+     * @param string[] $fieldsUnsafe fieldsUnsafe
+     * @param string[] $filterUnsafe filterUnsafe
+     * @param string   $filterLogic  filterLogic
+     * @param int      $limit        limit
+     * @param int      $offset       offset
+     *
+     * @return string[][]
+     */
+    public function getRows(
+        string $tableUnsafe,
+        array $fieldsUnsafe,
+        array $filterUnsafe = [],
+        string $filterLogic = 'OR',
+        int $limit = 0,
+        int $offset = 0
+    ): array {
+        return $this->get(
+            $tableUnsafe,
+            $fieldsUnsafe,
+            $filterUnsafe,
+            $filterLogic,
+            $limit,
+            $offset,
+            -1
+        );
+    }
+    
+    /**
+     * Method getOwnedRows
+     *
+     * @param string   $tableUnsafe  tableUnsafe
+     * @param string[] $fieldsUnsafe fieldsUnsafe
+     * @param string[] $filterUnsafe filterUnsafe
+     * @param string   $filterLogic  filterLogic
+     * @param int      $limit        limit
+     * @param int      $offset       offset
+     * @param int      $uid          uid
+     *
+     * @return string[][]
+     */
+    public function getOwnedRows(
+        string $tableUnsafe,
+        array $fieldsUnsafe,
+        array $filterUnsafe = [],
+        string $filterLogic = 'OR',
+        int $limit = 0,
+        int $offset = 0,
+        int $uid = 0
+    ): array {
+        return $this->get(
+            $tableUnsafe,
+            $fieldsUnsafe,
+            $filterUnsafe,
+            $filterLogic,
+            $limit,
+            $offset,
+            $uid
+        );
     }
     
     /**
@@ -61,16 +177,18 @@ class Crud
      * @param string   $tableUnsafe  tableUnsafe
      * @param string[] $fieldsUnsafe fieldsUnsafe
      * @param string[] $filterUnsafe filterUnsafe
+     * @param string   $filterLogic  filterLogic
      * @param int      $limit        limit
      * @param int      $offset       offset
      * @param int      $uid          uid
      *
      * @return mixed[]
      */
-    public function get(
+    protected function get(
         string $tableUnsafe,
         array $fieldsUnsafe,
         array $filterUnsafe = [],
+        string $filterLogic = 'OR',
         int $limit = 1,
         int $offset = 0,
         int $uid = 0
@@ -92,13 +210,10 @@ class Crud
             if (!$uid) {
                 $uid = (int)$this->session->get('uid');
             }
-            $query .= " JOIN `ownership` "
-                . "ON `ownership`.`row_id` = `$table`.`id` "
-                . "AND `ownership`.`table_name` = '$table' "
-                . "AND `ownership`.`user_id` = $uid";
+            $query .= $this->getOwnerJoin($table, $uid);
         }
         
-        $query .= $this->getWhere($table, $filterUnsafe, 'OR');
+        $query .= $this->getWhere($table, $filterUnsafe, $filterLogic);
         if ($limit >= 1) {
             $query .= " LIMIT $offset, $limit";
         }
@@ -106,6 +221,22 @@ class Crud
             return $this->mysql->selectOne($query);
         }
         return $this->mysql->select($query);
+    }
+    
+    /**
+     * Method getOwnerJoin
+     *
+     * @param string $table table
+     * @param int    $uid   uid
+     *
+     * @return string
+     */
+    protected function getOwnerJoin(string $table, int $uid): string
+    {
+        return " JOIN `ownership` "
+            . "ON `ownership`.`row_id` = `$table`.`id` "
+            . "AND `ownership`.`table_name` = '$table' "
+            . "AND `ownership`.`user_id` = $uid";
     }
     
     /**
@@ -222,22 +353,107 @@ class Crud
      *
      * @param string   $tableUnsafe  tableUnsafe
      * @param string[] $filterUnsafe filterUnsafe
+     * @param string   $filterLogic  filterLogic
      * @param int      $limit        limit
+     * @param int      $uid          uid
      *
      * @return int
+     * @throws RuntimeException
      */
     public function del(
         string $tableUnsafe,
         array $filterUnsafe,
-        int $limit = 1
+        string $filterLogic = 'AND',
+        int $limit = 1,
+        int $uid = 0
     ): int {
+        if ($limit < 0) {
+            throw new RuntimeException('Invalid limit: ' . $limit);
+        }
+        $this->validateOwner(
+            $tableUnsafe,
+            $filterUnsafe,
+            $filterLogic,
+            $limit,
+            $uid
+        );
         $table = $this->mysql->escape($tableUnsafe);
         $query = "DELETE FROM `$table`";
-        $query .= $this->getWhere($table, $filterUnsafe, 'AND');
+        $query .= $this->getWhere($table, $filterUnsafe, $filterLogic);
         if ($limit) {
             $query .= " LIMIT " . $limit;
         }
         return $this->mysql->delete($query);
+    }
+    
+    /**
+     * Method validateOwner
+     *
+     * @param string   $tableUnsafe  tableUnsafe
+     * @param string[] $filterUnsafe filterUnsafe
+     * @param string   $filterLogic  filterLogic
+     * @param int      $limit        limit
+     * @param int      $uid          uid
+     *
+     * @return void
+     * @throws RuntimeException
+     */
+    protected function validateOwner(
+        string $tableUnsafe,
+        array $filterUnsafe,
+        string $filterLogic,
+        int $limit,
+        int $uid
+    ): void {
+        if ($uid > -1) {
+            if ($limit === 1
+                && !$this->getOwnedRow(
+                    $tableUnsafe,
+                    ['id'],
+                    $filterUnsafe,
+                    $filterLogic,
+                    $uid
+                )
+            ) {
+                throw new RuntimeException('Invalid owner: ' . $uid);
+            }
+            if (!$this->getOwnedRows(
+                $tableUnsafe,
+                ['id'],
+                $filterUnsafe,
+                $filterLogic,
+                $limit,
+                $uid
+            )
+            ) {
+                throw new RuntimeException('Invalid owner: ' . $uid);
+            }
+        }
+    }
+    
+    /**
+     * Method setRow
+     *
+     * @param string   $tableUnsafe  tableUnsafe
+     * @param string[] $valuesUnsafe valuesUnsafe
+     * @param string[] $filterUnsafe filterUnsafe
+     * @param string   $filterLogic  filterLogic
+     *
+     * @return int
+     */
+    public function setRow(
+        string $tableUnsafe,
+        array $valuesUnsafe,
+        array $filterUnsafe,
+        string $filterLogic = 'AND'
+    ): int {
+        return $this->set(
+            $tableUnsafe,
+            $valuesUnsafe,
+            $filterUnsafe,
+            $filterLogic,
+            -1
+        );
     }
     
     /**
@@ -246,14 +462,52 @@ class Crud
      * @param string   $tableUnsafe  tableUnsafe
      * @param string[] $valuesUnsafe valuesUnsafe
      * @param string[] $filterUnsafe filterUnsafe
+     * @param string   $filterLogic  filterLogic
+     * @param int      $uid          uid
      *
      * @return int
      */
-    public function set(
+    public function setOwnedRow(
         string $tableUnsafe,
         array $valuesUnsafe,
-        array $filterUnsafe
+        array $filterUnsafe,
+        string $filterLogic = 'AND',
+        int $uid = 0
     ): int {
+        return $this->set(
+            $tableUnsafe,
+            $valuesUnsafe,
+            $filterUnsafe,
+            $filterLogic,
+            $uid
+        );
+    }
+    
+    /**
+     * Method set
+     *
+     * @param string   $tableUnsafe  tableUnsafe
+     * @param string[] $valuesUnsafe valuesUnsafe
+     * @param string[] $filterUnsafe filterUnsafe
+     * @param string   $filterLogic  filterLogic
+     * @param int      $uid          uid
+     *
+     * @return int
+     */
+    protected function set(
+        string $tableUnsafe,
+        array $valuesUnsafe,
+        array $filterUnsafe,
+        string $filterLogic = 'AND',
+        int $uid = 0
+    ): int {
+        $this->validateOwner(
+            $tableUnsafe,
+            $filterUnsafe,
+            $filterLogic,
+            1,
+            $uid
+        );
         $table = $this->mysql->escape($tableUnsafe);
         $fields = $this->safer->freez([$this->mysql, 'escape'], $valuesUnsafe);
         $sets = [];
@@ -261,7 +515,7 @@ class Crud
             $sets[] = "`$key` = '$value'";
         }
         $setstr = implode(', ', $sets);
-        $where = $this->getWhere($table, $filterUnsafe, 'AND');
+        $where = $this->getWhere($table, $filterUnsafe, $filterLogic);
         $query = "UPDATE $table SET $setstr $where LIMIT 1";
         return $this->mysql->update($query);
     }

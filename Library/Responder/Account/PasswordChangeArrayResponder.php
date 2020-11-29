@@ -78,7 +78,7 @@ class PasswordChangeArrayResponder extends ArrayResponder
             );
         }
         
-        if (!$this->crud->set(
+        if (!$this->crud->setRow(
             'user',
             [
                 'hash' => $this->encrypter->encrypt($params->get('password')),

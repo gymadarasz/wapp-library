@@ -79,13 +79,10 @@ class LoginArrayResponder extends ArrayResponder
             return $this->loginError($errors, $email);
         }
         
-        $user = $this->crud->get(
+        $user = $this->crud->getRow(
             'user',
             ['id', 'email', 'hash'],
-            ['email' => $email],
-            1,
-            0,
-            -1
+            ['email' => $email]
         );
         
         

@@ -12,7 +12,6 @@
  */
 
 use Madsoft\Library\Invoker;
-use Madsoft\Library\Test\LibraryTestCleaner;
 use Madsoft\Library\Tester\Tester;
 
 require __DIR__ . '/../../../vendor/autoload.php';
@@ -21,12 +20,13 @@ if (php_sapi_name() !== 'cli') {
     throw new RuntimeException('Test can run only from command line.');
 }
 
-$tester = (new Invoker())->getInstance(Tester::class)->setCleaners(
-    [
-        //    TalkbotTestCleaner::class,
-        LibraryTestCleaner::class,
-    ]
-);
+$tester = (new Invoker())->getInstance(Tester::class);
+//    ->setCleaners(
+//        [
+//            //    TalkbotTestCleaner::class,
+//            LibraryTestCleaner::class,
+//        ]
+//    );
         
 $tester->cleanUp();
 

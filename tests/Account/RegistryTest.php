@@ -88,7 +88,7 @@ class RegistryTest extends Test
         $user = ['email' => 'an-email-2'];
         
         $crud = $this->getMock(Crud::class);
-        $crud->shouldReceive('get')->andReturn($user);
+        $crud->shouldReceive('getRow')->andReturn($user);
         $crud->shouldReceive('add')->andReturnFalse();
         
         $validator = $this->getMock(AccountValidator::class);
@@ -165,7 +165,7 @@ class RegistryTest extends Test
         $user = ['email' => 'an-email-2'];
         
         $crud = $this->getMock(Crud::class);
-        $crud->shouldReceive('get')->andReturn($user);
+        $crud->shouldReceive('getRow')->andReturn($user);
         $crud->shouldReceive('add')->andReturnTrue();
         
         $validator = $this->getMock(AccountValidator::class);

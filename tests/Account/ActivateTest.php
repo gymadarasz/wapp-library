@@ -75,8 +75,8 @@ class ActivateTest extends Test
         ];
         
         $crud = $this->getMock(Crud::class);
-        $crud->shouldReceive('get')->andReturn($user);
-        $crud->shouldReceive('set')->andReturnFalse();
+        $crud->shouldReceive('getRow')->andReturn($user);
+        $crud->shouldReceive('setRow')->andReturnFalse();
         
         $validator = $this->getMock(AccountValidator::class);
         $validator->shouldReceive('validateActivate')->andReturn([]);

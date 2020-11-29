@@ -127,12 +127,47 @@ class Tester extends Test
      */
     public function test(array $pathes = self::TESTS_PATHES): void
     {
+        $this->setCleaners($this->findCleaners());
+        
         foreach ($pathes as $path) {
             $files = $this->folders->getFilesRecursive($path);
             foreach ($files as $file) {
                 $this->runTestFile($file->getFilename(), $file->getPath());
             }
         }
+    }
+    
+    /**
+     * Method findCleaners
+     *
+     * @param string[] $pathes pathes
+     *
+     * @return string[]
+     */
+    protected function findCleaners(array $pathes = self::TESTS_PATHES): array
+    {
+        $fullclasses = [];
+        foreach ($pathes as $path) {
+            $files = $this->folders->getFilesRecursive($path);
+            foreach ($files as $file) {
+                $filename = $file->getFilename();
+                $matches = [];
+                if (preg_match(
+                    '/([a-zA-Z0-9][a-zA-Z0-9_]*TestCleaner).php$/',
+                    $filename,
+                    $matches
+                )
+                ) {
+                    $class = $matches[1];
+
+                    $fullname = $path . '/' . $filename;
+                    $namespace = $this->getPhpNamespace($fullname);
+
+                    $fullclasses[] = "$namespace\\$class";
+                }
+            }
+        }
+        return $fullclasses;
     }
     
     /**

@@ -465,13 +465,10 @@ class AccountTest extends Test
         $this->assertStringContains(self::EMAIL, $emailFilename);
         $this->assertStringContains('Activate your account', $emailFilename);
         
-        $user = $this->crud->get(
+        $user = $this->crud->getRow(
             'user',
             ['token'],
-            ['email' => self::EMAIL],
-            1,
-            0,
-            -1
+            ['email' => self::EMAIL]
         );
         $activationLink = $this->config->get('Site')->get('base')
                 . '?q=activate&token=' . ($user['token'] ?? '');
@@ -512,13 +509,10 @@ class AccountTest extends Test
      */
     protected function canSeeActivationWorks(): void
     {
-        $user = $this->crud->get(
+        $user = $this->crud->getRow(
             'user',
             ['token'],
-            ['email' => self::EMAIL],
-            1,
-            0,
-            -1
+            ['email' => self::EMAIL]
         );
         $contents = $this->get('q=activate&token=' . ($user['token'] ?? ''));
         $this->assertStringContains('Account is now activated', $contents);
@@ -531,13 +525,10 @@ class AccountTest extends Test
      */
     protected function canSeeActivationUserAlreadyActiveFail(): void
     {
-        $user = $this->crud->get(
+        $user = $this->crud->getRow(
             'user',
             ['token'],
-            ['email' => self::EMAIL],
-            1,
-            0,
-            -1
+            ['email' => self::EMAIL]
         );
         $contents = $this->get('q=activate&token=' . ($user['token'] ?? ''));
         $this->assertStringContains('User is active already', $contents);
@@ -639,13 +630,10 @@ class AccountTest extends Test
         $contents = $this->get('q=reset&token=wron-token');
         $this->assertStringContains('Invalid token', $contents);
         
-        $user = $this->crud->get(
+        $user = $this->crud->getRow(
             'user',
             ['token'],
-            ['email' => self::EMAIL],
-            1,
-            0,
-            -1
+            ['email' => self::EMAIL]
         );
         $token = $user['token'] ?? '';
         $contents = $this->post(
@@ -714,13 +702,10 @@ class AccountTest extends Test
      */
     protected function canSeeNewPassword(): void
     {
-        $user = $this->crud->get(
+        $user = $this->crud->getRow(
             'user',
             ['token'],
-            ['email' => self::EMAIL],
-            1,
-            0,
-            -1
+            ['email' => self::EMAIL]
         );
         $contents = $this->get('q=reset&token=' . ($user['token'] ?? ''));
         $this->assertStringContains('Change password', $contents);
@@ -734,13 +719,10 @@ class AccountTest extends Test
      */
     protected function canSeeNewPasswordWorks(): void
     {
-        $user = $this->crud->get(
+        $user = $this->crud->getRow(
             'user',
             ['token'],
-            ['email' => self::EMAIL],
-            1,
-            0,
-            -1
+            ['email' => self::EMAIL]
         );
         $contents = $this->post(
             'q=change&token=' . ($user['token'] ?? ''),

@@ -102,7 +102,7 @@ class RegistryArrayResponder extends ArrayResponder
         $email = $params->get('email');
         $token = $this->token->generate();
         
-        $user = $this->crud->get('user', ['email'], ['email' => $email], 1, 0, -1);
+        $user = $this->crud->getRow('user', ['email'], ['email' => $email]);
         if (($user['email'] ?? '') === $email) {
             return $this->getErrorResponse(
                 'Email address already registered',

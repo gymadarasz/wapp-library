@@ -56,8 +56,8 @@ class LibraryTestCleaner implements Cleaner
      */
     public function cleanUp(): void
     {
-        $this->crud->del('user', [], 0);
-        $this->crud->del('ownership', [], 0);
+        $this->crud->del('user', [], 'AND', 0, -1);
+        $this->crud->del('ownership', [], 'AND', 0, -1);
         $this->deleteMails();
     }
     
