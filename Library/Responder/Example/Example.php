@@ -30,13 +30,13 @@ class Example
     const ROUTES = [
         'public' => [
             'GET' => [
-                'example' => [Example::class, 'getPublic'],
+                'example' => ['class' => Example::class, 'method' => 'getPublic'],
             ],
         ],
         'protected' => [
             'GET' => [
-                '' => [Example::class, 'getProtected'],
-                'example' => [Example::class, 'getProtected'],
+                '' => ['class' => Example::class, 'method' => 'getProtected'],
+                'example' => ['class' => Example::class, 'method' => 'getProtected'],
             ],
         ],
     ];

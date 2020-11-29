@@ -53,7 +53,7 @@ class App
         $output = $this->invoker
             ->getInstance(Request::class)
             ->setRoutes($this->getRoutes($routeExts))
-            ->setError([Error::class, 'error'])
+            ->setError(['class' => Error::class, 'method' => 'error'])
             ->process();
         //$this->invoker->free();
         return $output;

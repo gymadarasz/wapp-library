@@ -54,10 +54,12 @@ class Config extends Section
     }
     
     /**
-     * 
+     * Method getEnv
+     *
      * @return string
      */
-    protected function getEnv(): string {
+    protected function getEnv(): string
+    {
         $env = 'test';
         if (file_exists($this::PATH . 'env.php')) {
             include $this::PATH . 'env.php';

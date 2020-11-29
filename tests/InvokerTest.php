@@ -74,7 +74,7 @@ class InvokerTest extends Test
         $invoker->getInstance(Injectable::class);
 
         try {
-            $invoker->invoke([Injectable::class]);
+            $invoker->invoke(['class' => Injectable::class]);
             $this->assertTrue(false);
         } catch (RuntimeException $exc) {
             $this->assertEquals(

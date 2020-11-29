@@ -5,66 +5,66 @@
     array (
       '' => 
       array (
-        0 => 'Madsoft\\Library\\Responder\\Account\\Template\\LoginTemplateResponder',
-        1 => 'getLoginFormResponse',
+        'class' => 'Madsoft\\Library\\Responder\\Account\\Template\\LoginTemplateResponder',
+        'method' => 'getLoginFormResponse',
       ),
       'login' => 
       array (
-        0 => 'Madsoft\\Library\\Responder\\Account\\Template\\LoginTemplateResponder',
-        1 => 'getLoginFormResponse',
+        'class' => 'Madsoft\\Library\\Responder\\Account\\Template\\LoginTemplateResponder',
+        'method' => 'getLoginFormResponse',
       ),
       'registry' => 
       array (
-        0 => 'Madsoft\\Library\\Responder\\Account\\Template\\RegistryTemplateResponder',
-        1 => 'getRegistryFormResponse',
+        'class' => 'Madsoft\\Library\\Responder\\Account\\Template\\RegistryTemplateResponder',
+        'method' => 'getRegistryFormResponse',
       ),
       'resend' => 
       array (
-        0 => 'Madsoft\\Library\\Responder\\Account\\Template\\RegistryTemplateResponder',
-        1 => 'getResendResponse',
+        'class' => 'Madsoft\\Library\\Responder\\Account\\Template\\RegistryTemplateResponder',
+        'method' => 'getResendResponse',
       ),
       'activate' => 
       array (
-        0 => 'Madsoft\\Library\\Responder\\Account\\Template\\ActivateTemplateResponder',
-        1 => 'getActivateResponse',
+        'class' => 'Madsoft\\Library\\Responder\\Account\\Template\\ActivateTemplateResponder',
+        'method' => 'getActivateResponse',
       ),
       'reset' => 
       array (
-        0 => 'Madsoft\\Library\\Responder\\Account\\Template\\PasswordResetTemplateResponder',
-        1 => 'getPasswordResetFormResponse',
+        'class' => 'Madsoft\\Library\\Responder\\Account\\Template\\PasswordResetTemplateResponder',
+        'method' => 'getPasswordResetFormResponse',
       ),
       'example' => 
       array (
-        0 => 'Madsoft\\Library\\Responder\\Example\\Example',
-        1 => 'getPublic',
+        'class' => 'Madsoft\\Library\\Responder\\Example\\Example',
+        'method' => 'getPublic',
       ),
     ),
     'POST' => 
     array (
       '' => 
       array (
-        0 => 'Madsoft\\Library\\Responder\\Account\\Template\\LoginTemplateResponder',
-        1 => 'getLoginResponse',
+        'class' => 'Madsoft\\Library\\Responder\\Account\\Template\\LoginTemplateResponder',
+        'method' => 'getLoginResponse',
       ),
       'login' => 
       array (
-        0 => 'Madsoft\\Library\\Responder\\Account\\Template\\LoginTemplateResponder',
-        1 => 'getLoginResponse',
+        'class' => 'Madsoft\\Library\\Responder\\Account\\Template\\LoginTemplateResponder',
+        'method' => 'getLoginResponse',
       ),
       'registry' => 
       array (
-        0 => 'Madsoft\\Library\\Responder\\Account\\Template\\RegistryTemplateResponder',
-        1 => 'getRegistryResponse',
+        'class' => 'Madsoft\\Library\\Responder\\Account\\Template\\RegistryTemplateResponder',
+        'method' => 'getRegistryResponse',
       ),
       'reset' => 
       array (
-        0 => 'Madsoft\\Library\\Responder\\Account\\Template\\PasswordResetTemplateResponder',
-        1 => 'getPasswordResetRequestResponse',
+        'class' => 'Madsoft\\Library\\Responder\\Account\\Template\\PasswordResetTemplateResponder',
+        'method' => 'getPasswordResetRequestResponse',
       ),
       'change' => 
       array (
-        0 => 'Madsoft\\Library\\Responder\\Account\\Template\\PasswordChangeTemplateResponder',
-        1 => 'getPasswordChangeResponse',
+        'class' => 'Madsoft\\Library\\Responder\\Account\\Template\\PasswordChangeTemplateResponder',
+        'method' => 'getPasswordChangeResponse',
       ),
     ),
   ),
@@ -74,36 +74,36 @@
     array (
       'logout' => 
       array (
-        0 => 'Madsoft\\Library\\Responder\\Account\\Template\\LogoutTemplateResponder',
-        1 => 'getLogoutResponse',
+        'class' => 'Madsoft\\Library\\Responder\\Account\\Template\\LogoutTemplateResponder',
+        'method' => 'getLogoutResponse',
       ),
       '' => 
       array (
-        0 => 'Madsoft\\Library\\Responder\\Example\\Example',
-        1 => 'getProtected',
+        'class' => 'Madsoft\\Talkbot\\MyScripts',
+        'method' => 'viewList',
       ),
       'example' => 
       array (
-        0 => 'Madsoft\\Library\\Responder\\Example\\Example',
-        1 => 'getProtected',
+        'class' => 'Madsoft\\Library\\Responder\\Example\\Example',
+        'method' => 'getProtected',
       ),
       'my-scripts/list' => 
       array (
-        0 => 'Madsoft\\Talkbot\\MyScripts',
-        1 => 'viewList',
+        'class' => 'Madsoft\\Talkbot\\MyScripts',
+        'method' => 'viewList',
       ),
       'my-scripts/create' => 
       array (
-        0 => 'Madsoft\\Talkbot\\MyScripts',
-        1 => 'viewCreate',
+        'class' => 'Madsoft\\Talkbot\\MyScripts',
+        'method' => 'viewCreate',
       ),
     ),
     'POST' => 
     array (
       'my-scripts/create' => 
       array (
-        0 => 'Madsoft\\Talkbot\\MyScripts',
-        1 => 'doCreate',
+        'class' => 'Madsoft\\Talkbot\\MyScripts',
+        'method' => 'doCreate',
       ),
     ),
   ),

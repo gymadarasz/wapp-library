@@ -69,19 +69,28 @@ class Invoker
         array $constructorArgs = [],
         array $methodArgs = []
     ) {
-        $ctrlr = $this->instance($route[0], $constructorArgs);
-        if (!isset($route[1])) {
+        if (!isset($route['class'])) {
             throw new RuntimeException(
-                'Missing route controller: ' . $route[0] . '::???'
+                'index "class" is not set in route: '. print_r($route, true)
             );
         }
-        $method = $ctrlr[1]->getMethod($route[1]);
+        $ctrlr = $this->instance($route['class'], $constructorArgs);
+        if (!isset($route['method'])) {
+            throw new RuntimeException(
+                'Missing route controller: ' . $route['class'] . '::???'
+            );
+        }
+        $method = $ctrlr[1]->getMethod($route['method']);
         $args = $this->argsMerge(
             $method,
             $methodArgs,
-            sprintf(self::ERR_METHOD_HAS_NONCLASS_ARG, $route[0], $route[1])
+            sprintf(
+                self::ERR_METHOD_HAS_NONCLASS_ARG,
+                $route['class'],
+                $route['method']
+            )
         );
-        return $ctrlr[0]->{$route[1]}(...$args);
+        return $ctrlr[0]->{$route['method']}(...$args);
     }
     
     /**

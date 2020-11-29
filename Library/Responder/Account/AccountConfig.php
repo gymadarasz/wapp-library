@@ -37,60 +37,60 @@ abstract class AccountConfig
             'GET' => [
                 '' =>
                 [
-                    LoginTemplateResponder::class,
-                    'getLoginFormResponse'
+                    'class' => LoginTemplateResponder::class,
+                    'method' => 'getLoginFormResponse'
                 ],
                 'login' =>
                 [
-                    LoginTemplateResponder::class,
-                    'getLoginFormResponse'
+                    'class' => LoginTemplateResponder::class,
+                    'method' => 'getLoginFormResponse'
                 ],
                 'registry' =>
                 [
-                    RegistryTemplateResponder::class,
-                    'getRegistryFormResponse'
+                    'class' => RegistryTemplateResponder::class,
+                    'method' => 'getRegistryFormResponse'
                 ],
                 'resend' =>
                 [
-                    RegistryTemplateResponder::class,
-                    'getResendResponse'
+                    'class' => RegistryTemplateResponder::class,
+                    'method' => 'getResendResponse'
                 ],
                 'activate' =>
                 [
-                    ActivateTemplateResponder::class,
-                    'getActivateResponse'
+                    'class' => ActivateTemplateResponder::class,
+                    'method' => 'getActivateResponse'
                 ],
                 'reset' =>
                 [
-                    PasswordResetTemplateResponder::class,
-                    'getPasswordResetFormResponse'
+                    'class' => PasswordResetTemplateResponder::class,
+                    'method' => 'getPasswordResetFormResponse'
                 ],
             ],
             'POST' => [
                 '' =>
                 [
-                    LoginTemplateResponder::class,
-                    'getLoginResponse'
+                    'class' => LoginTemplateResponder::class,
+                    'method' => 'getLoginResponse'
                 ],
                 'login' =>
                 [
-                    LoginTemplateResponder::class,
-                    'getLoginResponse'
+                    'class' => LoginTemplateResponder::class,
+                    'method' => 'getLoginResponse'
                 ],
                 'registry' =>
                 [
-                    RegistryTemplateResponder::class,
-                    'getRegistryResponse'
+                    'class' => RegistryTemplateResponder::class,
+                    'method' => 'getRegistryResponse'
                 ],
                 'reset' =>
                 [
-                    PasswordResetTemplateResponder::class,
-                    'getPasswordResetRequestResponse'
+                    'class' => PasswordResetTemplateResponder::class,
+                    'method' => 'getPasswordResetRequestResponse'
                 ],
                 'change' =>
                 [
-                    PasswordChangeTemplateResponder::class,
-                    'getPasswordChangeResponse'
+                    'class' => PasswordChangeTemplateResponder::class,
+                    'method' => 'getPasswordChangeResponse'
                 ],
             ],
         ],
@@ -98,8 +98,8 @@ abstract class AccountConfig
             'GET' => [
                 'logout' =>
                 [
-                    LogoutTemplateResponder::class,
-                    'getLogoutResponse'
+                    'class' => LogoutTemplateResponder::class,
+                    'method' => 'getLogoutResponse'
                 ],
             ],
         ],
