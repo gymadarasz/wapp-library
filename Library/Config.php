@@ -27,7 +27,6 @@ use RuntimeException;
  */
 class Config extends Section
 {
-    const ENV = 'test';
     const PATH = __DIR__ . '/config/';
     const PATH_EXT = __DIR__ . '/../../src/config/';
     
@@ -45,11 +44,28 @@ class Config extends Section
     ) {
         $this->template = $template;
         
+        $env = $this->getEnv();
+        
         $this->data = $this->readConfig($this::PATH . 'config.ini');
-        $lib = $this->readConfig($this::PATH . 'config.' . $this::ENV . '.ini');
+        $lib = $this->readConfig($this::PATH . 'config.' . $env . '.ini');
         $this->data = $merger->merge($this->data, $lib);
-        $ext = $this->readConfig($this::PATH_EXT . 'config.' . $this::ENV . '.ini');
+        $ext = $this->readConfig($this::PATH_EXT . 'config.' . $env . '.ini');
         $this->data = $merger->merge($this->data, $ext);
+    }
+    
+    /**
+     * 
+     * @return string
+     */
+    protected function getEnv(): string {
+        $env = 'test';
+        if (file_exists($this::PATH . 'env.php')) {
+            include $this::PATH . 'env.php';
+        }
+        if (file_exists($this::PATH_EXT . 'env.php')) {
+            include $this::PATH_EXT . 'env.php';
+        }
+        return $env;
     }
     
     /**
