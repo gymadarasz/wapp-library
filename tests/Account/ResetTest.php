@@ -24,7 +24,6 @@ use Madsoft\Library\Params;
 use Madsoft\Library\Responder\Account\AccountValidator;
 use Madsoft\Library\Responder\Account\PasswordResetArrayResponder;
 use Madsoft\Library\Responder\Account\Template\PasswordResetTemplateResponder;
-use Madsoft\Library\Row;
 use Madsoft\Library\Template;
 use Madsoft\Library\Tester\Test;
 use Madsoft\Library\Token;
@@ -65,7 +64,8 @@ class ResetTest extends Test
         $merger = $invoker->getInstance(Merger::class);
         $crud = $this->getMock(Crud::class);
         $crud->shouldReceive('get')->andReturn(
-            (new Row)->setFields(['email' => 'emailaddr1'])
+        //            (new Row)->setFields(['email' => 'emailaddr1'])
+            ['email' => 'emailaddr1']
         );
         $crud->shouldReceive('set')->andReturnFalse();
         $_SERVER['REQUEST_METHOD'] = 'GET';
@@ -116,7 +116,8 @@ class ResetTest extends Test
         $merger = $invoker->getInstance(Merger::class);
         $crud = $this->getMock(Crud::class);
         $crud->shouldReceive('get')->andReturn(
-            (new Row)->setFields(['email' => 'emailaddr1'])
+        //            (new Row)->setFields(['email' => 'emailaddr1'])
+            ['email' => 'emailaddr1']
         );
         $crud->shouldReceive('set')->andReturnTrue();
         $_SERVER['REQUEST_METHOD'] = 'GET';

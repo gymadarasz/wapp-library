@@ -97,7 +97,7 @@ class LoginArrayResponder extends ArrayResponder
             return $this->loginError($errors, $email);
         }
         
-        $this->user->login((int)$user->get('id'));
+        $this->user->login((int)($user['id'] ?? ''));
         
         return $this->getSuccessResponse(
             'Login success'

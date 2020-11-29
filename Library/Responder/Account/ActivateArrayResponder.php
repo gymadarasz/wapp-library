@@ -82,13 +82,13 @@ class ActivateArrayResponder extends ArrayResponder
             0,
             -1
         );
-        if (!$user->get('id')) {
+        if (!($user['id'] ?? '')) {
             return $this->getErrorResponse(
                 'Invalid token'
             );
         }
         
-        if ($user->get('active')) {
+        if ($user['active'] ?? '') {
             return $this->getErrorResponse(
                 'User is active already'
             );

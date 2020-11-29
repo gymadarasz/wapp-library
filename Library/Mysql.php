@@ -144,15 +144,16 @@ class Mysql
      *
      * @param string $query query
      *
-     * @return Row
+     * @return string[]
      * @throws RuntimeException
      */
-    public function selectOne(string $query): Row
+    public function selectOne(string $query): array
     {
         $this->connect();
         $result = $this->mysqli->query($query);
         if ($result instanceof mysqli_result) {
-            return (new Row())->setFields($result->fetch_assoc() ?: []);
+            // return (new Row())->setFields($result->fetch_assoc() ?: []);
+            return $result->fetch_assoc() ?: [];
         }
         throw new RuntimeException(
             "MySQL query error:\n$query\nMessage: {$this->mysqli->error}"
@@ -174,7 +175,7 @@ class Mysql
         if ($result instanceof mysqli_result) {
             $rows = [];
             while ($row = $result->fetch_assoc()) {
-                //                $rows[] = (new Row())->setFields($row);
+                // $rows[] = (new Row())->setFields($row);
                 $rows[] = $row;
             }
             return $rows;

@@ -51,6 +51,10 @@ class Crud
         $this->session = $session;
     }
     
+    public function selectOwnedRows(): array {
+        
+    }
+    
     /**
      * Method row
      *
@@ -61,7 +65,7 @@ class Crud
      * @param int      $offset       offset
      * @param int      $uid          uid
      *
-     * @return mixed
+     * @return mixed[]
      */
     public function get(
         string $tableUnsafe,
@@ -70,7 +74,7 @@ class Crud
         int $limit = 1,
         int $offset = 0,
         int $uid = 0
-    ) {
+    ): array {
         $table = $this->mysql->escape($tableUnsafe);
         $mysql = $this->mysql;
         $fields = implode(

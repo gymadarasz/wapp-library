@@ -474,7 +474,7 @@ class AccountTest extends Test
             -1
         );
         $activationLink = $this->config->get('Site')->get('base')
-                . '?q=activate&token=' . $user->get('token');
+                . '?q=activate&token=' . ($user['token'] ?? '');
         $links = (new Document($emailFilename, true))->find('a');
         $found = false;
         foreach ($links as $link) {
@@ -520,7 +520,7 @@ class AccountTest extends Test
             0,
             -1
         );
-        $contents = $this->get('q=activate&token=' . $user->get('token'));
+        $contents = $this->get('q=activate&token=' . ($user['token'] ?? ''));
         $this->assertStringContains('Account is now activated', $contents);
     }
     
@@ -539,7 +539,7 @@ class AccountTest extends Test
             0,
             -1
         );
-        $contents = $this->get('q=activate&token=' . $user->get('token'));
+        $contents = $this->get('q=activate&token=' . ($user['token'] ?? ''));
         $this->assertStringContains('User is active already', $contents);
     }
     
@@ -647,7 +647,7 @@ class AccountTest extends Test
             0,
             -1
         );
-        $token = $user->get('token');
+        $token = $user['token'] ?? '';
         $contents = $this->post(
             'q=change&token=' . $token,
             [
@@ -722,7 +722,7 @@ class AccountTest extends Test
             0,
             -1
         );
-        $contents = $this->get('q=reset&token=' . $user->get('token'));
+        $contents = $this->get('q=reset&token=' . ($user['token'] ?? ''));
         $this->assertStringContains('Change password', $contents);
         // TODO check if correct form exists
     }
@@ -743,7 +743,7 @@ class AccountTest extends Test
             -1
         );
         $contents = $this->post(
-            'q=change&token=' . $user->get('token'),
+            'q=change&token=' . ($user['token'] ?? ''),
             [
                 'csrf' => $this->session->get('csrf'),
                 'password' => self::PASSWORD,

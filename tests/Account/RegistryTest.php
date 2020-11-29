@@ -24,13 +24,11 @@ use Madsoft\Library\Params;
 use Madsoft\Library\Responder\Account\AccountValidator;
 use Madsoft\Library\Responder\Account\RegistryArrayResponder;
 use Madsoft\Library\Responder\Account\Template\RegistryTemplateResponder;
-use Madsoft\Library\Row;
 use Madsoft\Library\Safer;
 use Madsoft\Library\Session;
 use Madsoft\Library\Template;
 use Madsoft\Library\Tester\Test;
 use Madsoft\Library\Token;
-use RuntimeException;
 
 /**
  * RegistryTest
@@ -77,15 +75,17 @@ class RegistryTest extends Test
         
         $merger = new Merger();
         
-        $user = $this->getMock(Row::class);
-        $user->shouldReceive('get')->andReturnUsing(
-            static function ($arg) {
-                if ($arg === 'email') {
-                    return 'an-email-2';
-                }
-                throw new RuntimeException('Invalid argument: ' . $arg);
-            }
-        );
+        //        $user = $this->getMock(Row::class);
+        //        $user->shouldReceive('get')->andReturnUsing(
+        //            static function ($arg) {
+        //                if ($arg === 'email') {
+        //                    return 'an-email-2';
+        //                }
+        //                throw new RuntimeException('Invalid argument: ' . $arg);
+        //            }
+        //        );
+        
+        $user = ['email' => 'an-email-2'];
         
         $crud = $this->getMock(Crud::class);
         $crud->shouldReceive('get')->andReturn($user);
@@ -150,16 +150,19 @@ class RegistryTest extends Test
         
         $merger = new Merger();
         
-        $user = $this->getMock(Row::class);
-        $user->shouldReceive('get')->andReturnUsing(
-            static function ($arg) {
-                if ($arg === 'email') {
-                    return 'an-email-2';
-                }
-                throw new RuntimeException('Invalid argument: ' . $arg);
-            }
-        );
-        $user->shouldReceive('getFields')->andReturn(['email' => 'an-email-2']);
+        //        $user = $this->getMock(Row::class);
+        //        $user->shouldReceive('get')->andReturnUsing(
+        //            static function ($arg) {
+        //                if ($arg === 'email') {
+        //                    return 'an-email-2';
+        //                }
+        //                throw new RuntimeException('Invalid argument: ' . $arg);
+        //            }
+        //        );
+        //        $user->shouldReceive('getFields')
+        //          ->andReturn(['email' => 'an-email-2']);
+        
+        $user = ['email' => 'an-email-2'];
         
         $crud = $this->getMock(Crud::class);
         $crud->shouldReceive('get')->andReturn($user);

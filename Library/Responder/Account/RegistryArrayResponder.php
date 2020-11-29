@@ -103,7 +103,7 @@ class RegistryArrayResponder extends ArrayResponder
         $token = $this->token->generate();
         
         $user = $this->crud->get('user', ['email'], ['email' => $email], 1, 0, -1);
-        if ($user->get('email') === $email) {
+        if (($user['email'] ?? '') === $email) {
             return $this->getErrorResponse(
                 'Email address already registered',
                 $errors
@@ -130,7 +130,7 @@ class RegistryArrayResponder extends ArrayResponder
         if (!$this->sendActivationEmail($email, $token)) {
             return $this->getWarningResponse(
                 'Activation email is not sent',
-                $user->getFields()
+                $user
             );
         }
         

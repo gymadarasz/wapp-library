@@ -21,12 +21,10 @@ use Madsoft\Library\Params;
 use Madsoft\Library\Responder\Account\AccountValidator;
 use Madsoft\Library\Responder\Account\ActivateArrayResponder;
 use Madsoft\Library\Responder\Account\Template\ActivateTemplateResponder;
-use Madsoft\Library\Row;
 use Madsoft\Library\Safer;
 use Madsoft\Library\Session;
 use Madsoft\Library\Template;
 use Madsoft\Library\Tester\Test;
-use RuntimeException;
 
 /**
  * ActivateTest
@@ -59,18 +57,22 @@ class ActivateTest extends Test
      */
     public function testDoActivateDbFails(): void
     {
-        $user = $this->getMock(Row::class);
-        $user->shouldReceive('get')->andReturnUsing(
-            static function ($arg) {
-                if ($arg === 'id') {
-                    return 123;
-                }
-                if ($arg === 'active') {
-                    return 0;
-                }
-                throw new RuntimeException('Invalid argument: ' . $arg);
-            }
-        );
+        //        $user = $this->getMock(Row::class);
+        //        $user->shouldReceive('get')->andReturnUsing(
+        //            static function ($arg) {
+        //                if ($arg === 'id') {
+        //                    return 123;
+        //                }
+        //                if ($arg === 'active') {
+        //                    return 0;
+        //                }
+        //                throw new RuntimeException('Invalid argument: ' . $arg);
+        //            }
+        //        );
+        $user = [
+            'id' => 123,
+            'active' => 0,
+        ];
         
         $crud = $this->getMock(Crud::class);
         $crud->shouldReceive('get')->andReturn($user);

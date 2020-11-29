@@ -97,18 +97,18 @@ class AccountValidator extends Validator
     /**
      * Method validateUser
      *
-     * @param Assoc  $user     user
-     * @param string $password password
+     * @param string[] $user     user
+     * @param string   $password password
      *
      * @return string[][]
      */
-    public function validateUser(Assoc $user, string $password): array
+    public function validateUser(array $user, string $password): array
     {
         $errors = $this->getErrors(
             [
                 'id' =>
                 [
-                    'value' => $user->get('id', ''),
+                    'value' => $user['id'] ?? '',
                     'rules' =>
                     [
                         Mandatory::class => null,
@@ -117,7 +117,7 @@ class AccountValidator extends Validator
                 ],
                 'email' =>
                 [
-                    'value' => $user->get('email', ''),
+                    'value' => $user['email'] ?? '',
                     'rules' =>
                     [
                         Mandatory::class => null,
@@ -126,7 +126,7 @@ class AccountValidator extends Validator
                 ],
                 'hash' =>
                 [
-                    'value' => $user->get('hash', ''),
+                    'value' => $user['hash'] ?? '',
                     'rules' =>
                     [
                         Mandatory::class => null,

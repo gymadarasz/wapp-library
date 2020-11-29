@@ -97,6 +97,11 @@
         'class' => 'Madsoft\\Talkbot\\MyScripts',
         'method' => 'viewCreate',
       ),
+      'my-scripts/edit' => 
+      array (
+        'class' => 'Madsoft\\Talkbot\\MyScripts',
+        'method' => 'editScript',
+      ),
     ),
     'POST' => 
     array (
@@ -104,6 +109,11 @@
       array (
         'class' => 'Madsoft\\Talkbot\\MyScripts',
         'method' => 'doCreate',
+      ),
+      'my-scripts/edit' => 
+      array (
+        'class' => 'Madsoft\\Talkbot\\MyScripts',
+        'method' => 'doEdit',
       ),
     ),
   ),
