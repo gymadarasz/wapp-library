@@ -293,16 +293,16 @@ class Tester extends Test
     /**
      * Method stat
      *
-     * @param string $coverageOutput    coverageOutput
      * @param float  $coverageThreshold coverageThreshold
+     * @param string $coverageOutput    coverageOutput
      *
      * @return bool
      *
      * @suppress PhanUnreferencedPublicMethod
      */
     public function stat(
-        string $coverageOutput = __DIR__ . '/coverage/coverage.html',
-        float $coverageThreshold = 100.0
+        float $coverageThreshold = 100.0,
+        string $coverageOutput = __DIR__ . '/coverage/coverage.html'
     ): bool {
         $coverageData = [];
         $coveragePassed = true;

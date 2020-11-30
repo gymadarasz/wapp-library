@@ -13,7 +13,6 @@
 
 namespace Madsoft\Library\Test\Account;
 
-use Madsoft\Library\Config;
 use Madsoft\Library\Crud;
 use Madsoft\Library\Encrypter;
 use Madsoft\Library\Invoker;
@@ -74,7 +73,6 @@ class ResetTest extends Test
         $validator = $this->getMock(AccountValidator::class);
         $validator->shouldReceive('validateReset')->andReturn([]);
         $mailer = $invoker->getInstance(Mailer::class);
-        $config = $invoker->getInstance(Config::class);
         $messages = new Messages();
         $encrypter = new Encrypter();
         $token = new Token($encrypter);
@@ -91,7 +89,7 @@ class ResetTest extends Test
             $crud, // @phpstan-ignore-line
             $validator, // @phpstan-ignore-line
             $mailer,
-            $config
+            //            $config
         );
         $result = $reset->getPasswordResetRequestResponse($arrayResponder, $params);
         $this->assertStringContains('Token is not updated', $result);
@@ -127,7 +125,6 @@ class ResetTest extends Test
         $validator->shouldReceive('validateReset')->andReturn([]);
         $mailer = $this->getMock(Mailer::class);
         $mailer->shouldReceive('send')->andReturnFalse();
-        $config = $invoker->getInstance(Config::class);
         $messages = new Messages();
         $encrypter = new Encrypter();
         $token = new Token($encrypter);
@@ -143,8 +140,8 @@ class ResetTest extends Test
             $token,
             $crud, // @phpstan-ignore-line
             $validator, // @phpstan-ignore-line
-            $mailer, // @phpstan-ignore-line
-            $config
+            // @phpstan-ignore-next-line
+            $mailer // @phpstan-ignore-line
         );
         $result = $reset->getPasswordResetRequestResponse($arrayResponder, $params);
         $this->assertStringContains('Email sending failed', $result);

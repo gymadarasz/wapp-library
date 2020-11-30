@@ -13,8 +13,8 @@
 
 namespace Madsoft\Library\Test;
 
+use Madsoft\Library\Invoker;
 use Madsoft\Library\Merger;
-use Madsoft\Library\Template;
 use Madsoft\Library\Tester\Test;
 use RuntimeException;
 
@@ -35,19 +35,19 @@ class ConfigTest extends Test
     /**
      * Method testReadConfigFails
      *
-     * @param Template $template template
-     * @param Merger   $merger   merger
+     * @param Invoker $invoker invoker
+     * @param Merger  $merger  merger
      *
      * @return void
      *
      * @suppress PhanUnreferencedPublicMethod
      * @suppress PhanNoopNew
      */
-    public function testReadConfigFails(Template $template, Merger $merger): void
+    public function testReadConfigFails(Invoker $invoker, Merger $merger): void
     {
         $exception = null;
         try {
-            new ConfigFileNotFoundMock($template, $merger);
+            new ConfigFileNotFoundMock(new Invoker(), $merger);
             $this->assertTrue(false);
         } catch (RuntimeException $exception) {
             $this->assertTrue(true);
@@ -59,7 +59,7 @@ class ConfigTest extends Test
         error_reporting(0);
         $exception = null;
         try {
-            new ConfigInvalidMock($template, $merger);
+            new ConfigInvalidMock($invoker, $merger);
             $this->assertTrue(false);
         } catch (RuntimeException $exception) {
             $this->assertTrue(true);

@@ -11,4 +11,4 @@
  * @link      this
  */
 
-$env = 'dev';
+$env = 'test';

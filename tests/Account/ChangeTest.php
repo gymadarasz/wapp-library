@@ -13,9 +13,11 @@
 
 namespace Madsoft\Library\Test\Account;
 
+use Madsoft\Library\Config;
 use Madsoft\Library\Crud;
 use Madsoft\Library\Csrf;
 use Madsoft\Library\Encrypter;
+use Madsoft\Library\Invoker;
 use Madsoft\Library\Merger;
 use Madsoft\Library\Messages;
 use Madsoft\Library\Params;
@@ -38,6 +40,7 @@ use Madsoft\Library\Tester\Test;
  * @link      this
  *
  * @SuppressWarnings(PHPMD.Superglobals)
+ * @SuppressWarnings(PHPMD.CouplingBetweenObjects)
  *
  * @suppress PhanUnreferencedClass
  */
@@ -67,9 +70,13 @@ class ChangeTest extends Test
         
         $safer = new Safer();
         
-        $template = new Template($safer, $csrf);
+        $invoker = new Invoker();
         
         $merger = new Merger();
+        
+        $config = new Config($invoker, $merger);
+        
+        $template = new Template($config, $safer, $csrf);
         
         $crud = $this->getMock(Crud::class);
         $crud->shouldReceive('setRow')->andReturnFalse();

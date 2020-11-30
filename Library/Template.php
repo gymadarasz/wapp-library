@@ -36,6 +36,7 @@ class Template
         'filename',
         'csrf',
         'csrfgen',
+        'base',
     ];
     
     /**
@@ -45,19 +46,37 @@ class Template
      */
     public array $vars;
     
+    protected bool $htmlViewTemplate = true;
+
+    protected Config $config;
     protected Safer $safer;
     protected Csrf $csrfgen;
     
     /**
      * Method __construct
      *
-     * @param Safer $safer safer
-     * @param Csrf  $csrf  csrf
+     * @param Config $config config
+     * @param Safer  $safer  safer
+     * @param Csrf   $csrf   csrf
      */
-    public function __construct(Safer $safer, Csrf $csrf)
+    public function __construct(Config $config, Safer $safer, Csrf $csrf)
     {
+        $this->config = $config;
         $this->safer = $safer;
         $this->csrfgen = $csrf;
+    }
+    
+    /**
+     * Method setHtmlViewTemplate
+     *
+     * @param bool $htmlViewTemplate htmlViewTemplate
+     *
+     * @return self
+     */
+    public function setHtmlViewTemplate(bool $htmlViewTemplate): self
+    {
+        $this->htmlViewTemplate = $htmlViewTemplate;
+        return $this;
     }
     
     /**
@@ -100,10 +119,14 @@ class Template
             $this->vars[$key] = $value;
         }
         $this->vars['csrf'] = $this->csrfgen->get();
+        if ($this->htmlViewTemplate) {
+            $this->vars['base'] = $this->config->get('Site')->get('base');
+        }
         ob_start();
         $this->include($filename, $path);
         $contents = (string)ob_get_contents();
         ob_end_clean();
+        $this->setHtmlViewTemplate(true);
         return $contents;
     }
     

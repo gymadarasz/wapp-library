@@ -17,6 +17,7 @@ use Madsoft\Library\Config;
 use Madsoft\Library\Crud;
 use Madsoft\Library\Csrf;
 use Madsoft\Library\Encrypter;
+use Madsoft\Library\Invoker;
 use Madsoft\Library\Mailer;
 use Madsoft\Library\Merger;
 use Madsoft\Library\Messages;
@@ -71,9 +72,13 @@ class RegistryTest extends Test
         
         $safer = new Safer();
         
-        $template = new Template($safer, $csrf);
+        $invoker = new Invoker();
         
         $merger = new Merger();
+        
+        $config = new Config($invoker, $merger);
+        
+        $template = new Template($config, $safer, $csrf);
         
         //        $user = $this->getMock(Row::class);
         //        $user->shouldReceive('get')->andReturnUsing(
@@ -96,8 +101,6 @@ class RegistryTest extends Test
         
         $mailer = $this->getMock(Mailer::class);
         
-        $config = new Config($template, $merger);
-        
         $messages = new Messages();
         
         $registy = new RegistryTemplateResponder(
@@ -115,8 +118,8 @@ class RegistryTest extends Test
             $encrypter,
             $crud, // @phpstan-ignore-line
             $validator, // @phpstan-ignore-line
-            $mailer, // @phpstan-ignore-line
-            $config // @phpstan-ignore-line
+            // @phpstan-ignore-next-line
+            $mailer // @phpstan-ignore-line
         );
         $result = $registy->getRegistryResponse($arrayResponder, $params, $session);
         $this->assertStringContains('User is not saved', $result);
@@ -146,9 +149,13 @@ class RegistryTest extends Test
         
         $safer = new Safer();
         
-        $template = new Template($safer, $csrf);
+        $invoker = new Invoker();
         
         $merger = new Merger();
+        
+        $config = new Config($invoker, $merger);
+        
+        $template = new Template($config, $safer, $csrf);
         
         //        $user = $this->getMock(Row::class);
         //        $user->shouldReceive('get')->andReturnUsing(
@@ -174,8 +181,6 @@ class RegistryTest extends Test
         $mailer = $this->getMock(Mailer::class);
         $mailer->shouldReceive('send')->andReturnFalse();
         
-        $config = new Config($template, $merger);
-        
         $messages = new Messages();
         
         $registy = new RegistryTemplateResponder(
@@ -193,8 +198,8 @@ class RegistryTest extends Test
             $encrypter,
             $crud, // @phpstan-ignore-line
             $validator, // @phpstan-ignore-line
-            $mailer, // @phpstan-ignore-line
-            $config // @phpstan-ignore-line
+            // @phpstan-ignore-next-line
+            $mailer // @phpstan-ignore-line
         );
         $result = $registy->getRegistryResponse($arrayResponder, $params, $session);
         $this->assertStringContains('Activation email is not sent', $result);

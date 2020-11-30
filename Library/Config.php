@@ -30,19 +30,21 @@ class Config extends Section
     const PATH = __DIR__ . '/config/';
     const PATH_EXT = __DIR__ . '/../../src/config/';
     
-    protected Template $template;
+    protected ?Template $template = null;
+    
+    protected Invoker $invoker;
     
     /**
      * Method __construct
      *
-     * @param Template $template template
-     * @param Merger   $merger   merger
+     * @param Invoker $invoker invoker
+     * @param Merger  $merger  merger
      */
     public function __construct(
-        Template $template,
+        Invoker $invoker,
         Merger $merger
     ) {
-        $this->template = $template;
+        $this->invoker = $invoker;
         
         $env = $this->getEnv();
         
@@ -51,6 +53,23 @@ class Config extends Section
         $this->data = $merger->merge($this->data, $lib);
         $ext = $this->readConfig($this::PATH_EXT . 'config.' . $env . '.ini');
         $this->data = $merger->merge($this->data, $ext);
+    }
+    
+    /**
+     * Method getTemplate
+     *
+     * @return Template
+     */
+    protected function getTemplate(): Template
+    {
+        if (null === $this->template) {
+            $this->template = new Template(
+                $this,
+                $this->invoker->getInstance(Safer::class),
+                $this->invoker->getInstance(Csrf::class)
+            );
+        }
+        return $this->template;
     }
     
     /**
@@ -83,7 +102,10 @@ class Config extends Section
         if (!file_exists($filename)) {
             throw new RuntimeException('Config file not found: ' . $filename);
         }
-        $inistr = $this->template->process($filename, ['__DIR__' => __DIR__], '');
+        $inistr = $this
+            ->getTemplate()
+            ->setHtmlViewTemplate(false)
+            ->process($filename, ['__DIR__' => __DIR__], '');
         $cfg = parse_ini_string($inistr, true);
         
         if (false === $cfg) {

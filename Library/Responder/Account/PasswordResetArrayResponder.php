@@ -14,7 +14,6 @@
 namespace Madsoft\Library\Responder\Account;
 
 use Madsoft\Library\Assoc;
-use Madsoft\Library\Config;
 use Madsoft\Library\Crud;
 use Madsoft\Library\Mailer;
 use Madsoft\Library\Merger;
@@ -42,7 +41,6 @@ class PasswordResetArrayResponder extends ArrayResponder
     protected Crud $crud;
     protected AccountValidator $validator;
     protected Mailer $mailer;
-    protected Config $config;
 
     /**
      * Method __construct
@@ -54,7 +52,6 @@ class PasswordResetArrayResponder extends ArrayResponder
      * @param Crud             $crud      crud
      * @param AccountValidator $validator validator
      * @param Mailer           $mailer    mailer
-     * @param Config           $config    config
      */
     public function __construct(
         Messages $messages,
@@ -63,8 +60,7 @@ class PasswordResetArrayResponder extends ArrayResponder
         Token $token,
         Crud $crud,
         AccountValidator $validator,
-        Mailer $mailer,
-        Config $config
+        Mailer $mailer
     ) {
         parent::__construct($messages, $merger);
         $this->template = $template;
@@ -72,7 +68,6 @@ class PasswordResetArrayResponder extends ArrayResponder
         $this->crud = $crud;
         $this->validator = $validator;
         $this->mailer = $mailer;
-        $this->config = $config;
     }
     /**
      * Method getPasswordResetFormResponse
@@ -154,7 +149,7 @@ class PasswordResetArrayResponder extends ArrayResponder
         $message = $this->template->process(
             'emails/reset.phtml',
             [
-                'base' => $this->config->get('Site')->get('base'),
+            //                'base' => $this->config->get('Site')->get('base'),
                 'token' => $token,
             ],
             $this::EMAIL_TPL_PATH

@@ -13,8 +13,10 @@
 
 namespace Madsoft\Library\Test\Account;
 
+use Madsoft\Library\Config;
 use Madsoft\Library\Crud;
 use Madsoft\Library\Csrf;
+use Madsoft\Library\Invoker;
 use Madsoft\Library\Merger;
 use Madsoft\Library\Messages;
 use Madsoft\Library\Params;
@@ -91,9 +93,13 @@ class ActivateTest extends Test
         
         $safer = new Safer();
         
-        $template = new Template($safer, $csrf);
+        $invoker = new Invoker();
         
         $merger = new Merger();
+        
+        $config = new Config($invoker, $merger);
+        
+        $template = new Template($config, $safer, $csrf);
         
         $messages = new Messages();
         

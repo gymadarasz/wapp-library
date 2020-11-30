@@ -14,7 +14,6 @@
 namespace Madsoft\Library\Responder\Account;
 
 use Madsoft\Library\Assoc;
-use Madsoft\Library\Config;
 use Madsoft\Library\Crud;
 use Madsoft\Library\Encrypter;
 use Madsoft\Library\Mailer;
@@ -45,7 +44,6 @@ class RegistryArrayResponder extends ArrayResponder
     protected Crud $crud;
     protected AccountValidator $validator;
     protected Mailer $mailer;
-    protected Config $config;
     
     /**
      * Method __construct
@@ -58,7 +56,6 @@ class RegistryArrayResponder extends ArrayResponder
      * @param Crud             $crud      crud
      * @param AccountValidator $validator validator
      * @param Mailer           $mailer    mailer
-     * @param Config           $config    config
      */
     public function __construct(
         Messages $messages,
@@ -68,8 +65,7 @@ class RegistryArrayResponder extends ArrayResponder
         Encrypter $encrypter,
         Crud $crud,
         AccountValidator $validator,
-        Mailer $mailer,
-        Config $config
+        Mailer $mailer
     ) {
         parent::__construct($messages, $merger);
         $this->template = $template;
@@ -78,7 +74,6 @@ class RegistryArrayResponder extends ArrayResponder
         $this->crud = $crud;
         $this->validator = $validator;
         $this->mailer = $mailer;
-        $this->config = $config;
     }
 
     /**
@@ -177,7 +172,7 @@ class RegistryArrayResponder extends ArrayResponder
         $message = $this->template->process(
             'emails/activation.phtml',
             [
-                'base' => $this->config->get('Site')->get('base'),
+            //                'base' => $this->config->get('Site')->get('base'),
                 'token' => $token,
             ],
             $this::EMAIL_TPL_PATH

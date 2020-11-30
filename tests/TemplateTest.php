@@ -13,8 +13,10 @@
 
 namespace Madsoft\Library\Test;
 
+use Madsoft\Library\Config;
 use Madsoft\Library\Csrf;
 use Madsoft\Library\Invoker;
+use Madsoft\Library\Merger;
 use Madsoft\Library\Params;
 use Madsoft\Library\Safer;
 use Madsoft\Library\Session;
@@ -48,6 +50,7 @@ class TemplateTest extends Test
     public function testTemplate(Invoker $invoker): void
     {
         $template = new Template(
+            new Config(new Invoker(), new Merger()),
             new Safer(),
             $invoker->getInstance(Csrf::class)
         );
@@ -64,9 +67,10 @@ class TemplateTest extends Test
         $this->assertEquals("Variable name can not be number: '0'", $msg);
         
         try {
-            $template->process(
+            $template->setHtmlViewTemplate(false)->process(
                 __DIR__ . '/test.phtml',
-                ['safer' => 'never!']
+                ['safer' => 'never!'],
+                null
             );
         } catch (RuntimeException $exception) {
             $msg = $exception->getMessage();
@@ -83,6 +87,7 @@ class TemplateTest extends Test
         $this->assertTrue((bool)$csrf);
         
         $template = new Template(
+            new Config(new Invoker(), new Merger()),
             new Safer(),
             new Csrf(new Session(), new Params())
         );
